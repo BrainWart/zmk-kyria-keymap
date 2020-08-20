@@ -43,6 +43,7 @@
 	                              &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    
 			>;
 		};
+		
 		text_layer {
 			bindings = <
 	&trans    &trans    &trans    &trans    &trans    &trans                                              &kp HOME  &kp PGDN  &kp PGUP  &kp END   &trans    &trans  
