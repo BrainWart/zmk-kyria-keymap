@@ -2,8 +2,8 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                         |  Y  |   U   |  I    |  O   |   P   |   \   |
 // | *TEXT |  A  |  S  |  D   |  F   |  G   |                                         |  H  |   J   |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  HOME  |  END  |      |  PGDN  |  PGUP  |  N  |   M   |  ,    |  .   |   /   | SHIFT |
-//                     | GUI  |  [   |  ]   |  BKSP  |  DEL  |      |  RET   |  SPACE |  `  | &NUMS | R-ALT |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  HOME  |  END  |      |  PG_DN |  PG_UP |  N  |   M   |  ,    |  .   |   /   | SHIFT |
+//                     | K_CMENU |  [   |  ]   |  BSPC  |  DEL  |      |  RET   |  SPACE |  `  | &NUMS | R-ALT |
 
 #define L_NUMS 1
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -14,7 +14,7 @@
 
 #define L_TEXT 2
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                                         | HOME |  PGDN | PGUP  | END |       |       |
+// |       |     |     |      |      |      |                                         | HOME |  PG_DN | PG_UP | END |       |       |
 // |       |     |     |      |      |      |                                         |  ←   |   ↓   |  ↑    |  →  |       |       |
 // |       |     |     |      |      |      |       |      |            |      |      |      |       |       |     |       |       |
 //                     |      |  ESC |      |       |      |            |      |      |      |       |       |
@@ -29,25 +29,25 @@
 		default_layer {
 			bindings = <
 	&kp TAB         &kp Q &kp W &kp E &kp R &kp T                                                                                 &kp Y &kp U  &kp I    &kp O   &kp P    &kp BSLH
-	&lt L_NUMS GRAV &kp A &kp S &kp D &kp F &kp G                                                                                 &kp H &kp J  &kp K    &kp L   &kp SCLN &lt L_NUMS QUOT
-	&kp LSFT        &kp Z &kp X &kp C &kp V &kp B  &none         &none                        &none            &none              &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp RSFT
-	                    &kp LGUI &kp LBKT &kp RBKT &mt LCTL BKSP &mt LALT DEL                 &mt RCTL RET     &kp SPC  &mo L_TEXT &kp RALT &kp 0x76
+	&lt L_NUMS GRAVE &kp A &kp S &kp D &kp F &kp G                                                                                 &kp H &kp J  &kp K    &kp L   &kp SEMI &lt L_NUMS SQT 
+	&kp LSHFT       &kp Z &kp X &kp C &kp V &kp B  &none         &none                        &none            &none              &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+	                    &kp LGUI &kp LBKT &kp RBKT &mt LCTRL BSPC &mt LALT DEL                 &mt RCTRL RET     &kp SPACE &mo L_TEXT &kp RALT &kp 0x76
 			>;
 		};
 
 		nums_layer {
 			bindings = <
 	&kp F11   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                              &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F12
-	&kp ESC   &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5                                           &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 &trans
-	&trans    &trans    &trans    &trans    &kp EQL   &trans    &trans    &trans      &trans    &trans    &trans    &kp MINUS &trans    &trans    &trans    &trans  
+	&kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                              &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
+	&trans    &trans    &trans    &trans    &kp EQUAL &trans    &trans    &trans      &trans    &trans    &trans    &kp MINUS &trans    &trans    &trans    &trans  
 	                              &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    
 			>;
 		};
 		
 		text_layer {
 			bindings = <
-	&trans    &trans    &trans    &trans    &trans    &trans                                              &kp HOME  &kp PGDN  &kp PGUP  &kp END   &trans    &trans  
-	&trans    &trans    &trans    &trans    &trans    &trans                                              &kp LARW  &kp DARW  &kp UARW  &kp RARW  &trans    &trans  
+	&trans    &trans    &trans    &trans    &trans    &trans                                              &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans    &trans  
+	&trans    &trans    &trans    &trans    &trans    &trans                                              &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans  
 	&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans  
 	                              &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    
 			>;
